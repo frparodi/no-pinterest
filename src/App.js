@@ -1,24 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+
+import Navbar from "./components/Navbar/Navbar";
+import PinScreen from "./screens/PinScreen/PinScreen";
+
+const pins = [
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+  {
+    title: "Cat",
+    description: "Some description...",
+    sourceUrl: "http://placekitten.com",
+    imageUrl: "http://placekitten.com/g/200/300",
+  },
+];
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: lightBlue;
+  gap: 1rem;
+  min-height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Navbar />
+      <PinScreen pins={pins} />
+    </AppContainer>
   );
 }
 
