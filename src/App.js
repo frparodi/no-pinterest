@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar";
 import PinScreen from "./screens/PinScreen/PinScreen";
 
@@ -66,7 +68,10 @@ const App = () => {
   return (
     <AppContainer>
       <Navbar />
-      <PinScreen pins={pins} />
+      <Routes>
+        <Route path="/" element={<PinScreen pins={pins} />} />
+        <Route path="pins" element={<PinScreen pins={pins} />} />
+      </Routes>
     </AppContainer>
   );
 };
