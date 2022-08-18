@@ -62,13 +62,13 @@ const AppContainer = styled.div`
   min-height: 100vh;
 `;
 
-function App() {
+const App = () => {
   return (
     <AppContainer>
       <Navbar />
       <PinScreen pins={pins} />
     </AppContainer>
   );
-}
+};
 
 export default App;

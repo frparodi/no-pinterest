@@ -11,8 +11,9 @@ const Container = styled.div`
 const PinGrid = ({ pins }) => {
   return (
     <Container>
-      {pins.map((pin) => (
+      {pins.map((pin, index) => (
         <Pin
+          key={index}
           title={pin.title}
           description={pin.description}
           sourceUrl={pin.sourceUrl}
